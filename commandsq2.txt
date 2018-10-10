@@ -1,0 +1,170 @@
+shermans-air:gitTest2526 shermanchong$ git tag ver1.00
+shermans-air:gitTest2526 shermanchong$ git tag
+ver1.00
+shermans-air:gitTest2526 shermanchong$ git push origin ver1.00
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/shermanchong/gitTest2526.git
+ * [new tag]         ver1.00 -> ver1.00
+shermans-air:gitTest2526 shermanchong$ git branch special_feature
+shermans-air:gitTest2526 shermanchong$ git branch
+* master
+  special_feature
+shermans-air:gitTest2526 shermanchong$ checkout special_feature
+-bash: checkout: command not found
+shermans-air:gitTest2526 shermanchong$ git checkout special_feature
+M	Test2/commands.txt
+Switched to branch 'special_feature'
+shermans-air:gitTest2526 shermanchong$ grep "myhtml" ~/Desktop/assets/myfile.bak 
+<!--myhtml--><head><title>Stars!</title><link href="index.css" type="text/css" rel="stylesheet" /></head><body><div id='sky'></div><button id='scramble'>Scramble</button><script src="index.js"></script>3</body>
+shermans-air:gitTest2526 shermanchong$ nano ~/Desktop/Q1/index.html 
+shermans-air:gitTest2526 shermanchong$ nano ~/Desktop/Q1/index.html 
+shermans-air:gitTest2526 shermanchong$ nano ~/Desktop/Q1/index.html 
+shermans-air:gitTest2526 shermanchong$ git status
+On branch special_feature
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   Test2/commands.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+shermans-air:gitTest2526 shermanchong$ git add Test2/commands.txt
+shermans-air:gitTest2526 shermanchong$ git status 
+On branch special_feature
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   Test2/commands.txt
+
+shermans-air:gitTest2526 shermanchong$ git commit -m "added to commands.txt"
+[special_feature d91dc07] added to commands.txt
+ 1 file changed, 122 insertions(+)
+shermans-air:gitTest2526 shermanchong$ git status
+On branch special_feature
+nothing to commit, working tree clean
+shermans-air:gitTest2526 shermanchong$ git push origin special_feature
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 1.38 KiB | 706.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'special_feature' on GitHub by visiting:
+remote:      https://github.com/shermanchong/gitTest2526/pull/new/special_feature
+remote: 
+To https://github.com/shermanchong/gitTest2526.git
+ * [new branch]      special_feature -> special_feature
+shermans-air:gitTest2526 shermanchong$ grep "myjs" ~/Desktop/assets/myfile.bak > ~/Desktop/gitTest2526/index.js
+shermans-air:gitTest2526 shermanchong$ git status
+On branch special_feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	index.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+shermans-air:gitTest2526 shermanchong$ git add index.js
+shermans-air:gitTest2526 shermanchong$ git status
+On branch special_feature
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   index.js
+
+shermans-air:gitTest2526 shermanchong$ git commit -m "addedindex.js file"
+[special_feature 2d661fd] addedindex.js file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 index.js
+shermans-air:gitTest2526 shermanchong$ git push origin special_feature
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.80 KiB | 1.80 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/shermanchong/gitTest2526.git
+   d91dc07..2d661fd  special_feature -> special_feature
+shermans-air:gitTest2526 shermanchong$ grep "mycss" ~/Desktop/assets/myfile.bak  > ~/Desktop/gitTest2526/index.css
+shermans-air:gitTest2526 shermanchong$ git status
+On branch special_feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	index.css
+
+nothing added to commit but untracked files present (use "git add" to track)
+shermans-air:gitTest2526 shermanchong$ git add index.css
+shermans-air:gitTest2526 shermanchong$ git status
+On branch special_feature
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   index.css
+
+shermans-air:gitTest2526 shermanchong$ git commit -m "added index.css file"
+[special_feature cc08539] added index.css file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 index.css
+shermans-air:gitTest2526 shermanchong$ git push origin special_feature
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 406 bytes | 406.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/shermanchong/gitTest2526.git
+   2d661fd..cc08539  special_feature -> special_feature
+shermans-air:gitTest2526 shermanchong$ git status
+On branch special_feature
+nothing to commit, working tree clean
+shermans-air:gitTest2526 shermanchong$ git checkout master 
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+shermans-air:gitTest2526 shermanchong$ git merge 
+Already up to date.
+shermans-air:gitTest2526 shermanchong$ git merger special_feature
+git: 'merger' is not a git command. See 'git --help'.
+
+The most similar command is
+	merge
+shermans-air:gitTest2526 shermanchong$ git pull special_feature
+fatal: 'special_feature' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+shermans-air:gitTest2526 shermanchong$ git merge master
+Already up to date.
+shermans-air:gitTest2526 shermanchong$ git merge special_feature
+Updating 80d4e56..cc08539
+Fast-forward
+ Test2/commands.txt | 122 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ index.css          |   1 +
+ index.js           |   1 +
+ 3 files changed, 124 insertions(+)
+ create mode 100644 index.css
+ create mode 100644 index.js
+shermans-air:gitTest2526 shermanchong$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+shermans-air:gitTest2526 shermanchong$ git commit -m "merged master "
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+shermans-air:gitTest2526 shermanchong$ git push origin master 
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/shermanchong/gitTest2526.git
+   80d4e56..cc08539  master -> master
+shermans-air:gitTest2526 shermanchong$ git tag ver1.01
+shermans-air:gitTest2526 shermanchong$ git tag
+ver1.00
+ver1.01
+shermans-air:gitTest2526 shermanchong$ git push origin ver1.01
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/shermanchong/gitTest2526.git
+ * [new tag]         ver1.01 -> ver1.01
