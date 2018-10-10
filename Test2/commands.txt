@@ -1,0 +1,122 @@
+shermans-air:~ shermanchong$ cd ~/Desktop
+shermans-air:Desktop shermanchong$ mkdir Test2
+shermans-air:Desktop shermanchong$ touch ~/Desktop/Test2/commands.txt
+shermans-air:Desktop shermanchong$ cd ~/Desktop
+shermans-air:Desktop shermanchong$ git clone https://github.com/shermanchong/gitTest2526.git
+Cloning into 'gitTest2526'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+shermans-air:Desktop shermanchong$ mv -r ~/Desktop/Test2/ ~/Desktop/gitTest2526/
+mv: illegal option -- r
+usage: mv [-f | -i | -n] [-v] source target
+       mv [-f | -i | -n] [-v] source ... directory
+shermans-air:Desktop shermanchong$ mv ~/Desktop/Test2/ ~/Desktop/gitTest2526/
+shermans-air:Desktop shermanchong$ git status
+fatal: not a git repository (or any of the parent directories): .git
+shermans-air:Desktop shermanchong$ git commit 
+fatal: not a git repository (or any of the parent directories): .git
+shermans-air:Desktop shermanchong$ cd ~/Desktop/git
+-bash: cd: /Users/shermanchong/Desktop/git: No such file or directory
+shermans-air:Desktop shermanchong$ cd ~/Desktop/gitTest2526/
+shermans-air:gitTest2526 shermanchong$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Test2/
+
+nothing added to commit but untracked files present (use "git add" to track)
+shermans-air:gitTest2526 shermanchong$ git add Test2/
+shermans-air:gitTest2526 shermanchong$ git commit -m "add Test2"
+[master 953e5bd] add Test2
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Test2/commands.txt
+shermans-air:gitTest2526 shermanchong$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+shermans-air:gitTest2526 shermanchong$ git push origin master 
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 329 bytes | 329.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/shermanchong/gitTest2526.git
+   eb33de9..953e5bd  master -> master
+shermans-air:gitTest2526 shermanchong$ touch ~/Desktop/gitTest2526/repo.txt
+shermans-air:gitTest2526 shermanchong$ nano ~/Desktop/gitTest2526/repo.txt 
+shermans-air:gitTest2526 shermanchong$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	repo.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+shermans-air:gitTest2526 shermanchong$ git add repo.txt
+shermans-air:gitTest2526 shermanchong$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   repo.txt
+
+shermans-air:gitTest2526 shermanchong$ git commit -m "nano repo.txt"
+[master f8c681b] nano repo.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 repo.txt
+shermans-air:gitTest2526 shermanchong$ git push origin master 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 362 bytes | 362.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/shermanchong/gitTest2526.git
+   953e5bd..f8c681b  master -> master
+shermans-air:gitTest2526 shermanchong$ nano ~/Desktop/gitTest2526/
+shermans-air:gitTest2526 shermanchong$ nano ~/Desktop/gitTest2526/
+shermans-air:gitTest2526 shermanchong$ nano ~/Desktop/gitTest2526/index.html
+shermans-air:gitTest2526 shermanchong$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+shermans-air:gitTest2526 shermanchong$ git add index.html
+shermans-air:gitTest2526 shermanchong$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   index.html
+
+shermans-air:gitTest2526 shermanchong$ git commit -m "add index.html"
+[master 80d4e56] add index.html
+ 1 file changed, 3 insertions(+)
+ create mode 100644 index.html
+shermans-air:gitTest2526 shermanchong$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 375 bytes | 375.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/shermanchong/gitTest2526.git
+   f8c681b..80d4e56  master -> master
+shermans-air:gitTest2526 shermanchong$ nano ~/Desktop/gitTest2526/Test2/commands.txt 
+
